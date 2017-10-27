@@ -182,6 +182,200 @@
         $('.txt11').show();
       });
     });
+    $('.txt12').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt12').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt12').text(txtInput.val());
+        $('.txt12').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt12').show();
+      });
+    });
+    $('.txt13').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt13').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt13').text(txtInput.val());
+        $('.txt13').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt13').show();
+      });
+    });
+    $('.txt14').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt14').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt14').text(txtInput.val());
+        $('.txt14').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt14').show();
+      });
+    });
+    $('.txt15').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt15').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt15').text(txtInput.val());
+        $('.txt15').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt15').show();
+      });
+    });
+    $('.txt16').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt16').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt16').text(txtInput.val());
+        $('.txt16').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt16').show();
+      });
+    });
+    $('.txt17').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt17').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt17').text(txtInput.val());
+        $('.txt17').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt17').show();
+      });
+    });
+    $('.txt18').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt18').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt18').text(txtInput.val());
+        $('.txt18').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt18').show();
+      });
+    });
+    $('.txt19').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt19').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt19').text(txtInput.val());
+        $('.txt19').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt19').show();
+      });
+    });
+    $('.txt20').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt20').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt20').text(txtInput.val());
+        $('.txt20').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt20').show();
+      });
+    });
+    $('.txt21').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt21').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt21').text(txtInput.val());
+        $('.txt21').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt21').show();
+      });
+    });
+    $('.txt22').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt22').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt22').text(txtInput.val());
+        $('.txt22').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt22').show();
+      });
+    });
+    $('.txt11').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt11').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt11').text(txtInput.val());
+        $('.txt11').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt11').show();
+      });
+    });
+    $('.txt11').on('click',function(){
+      var txtInput=$("<input type='text' id='txtInput' />").val($('.txt11').text());
+
+      $(this).hide();
+      $('body').append(txtInput).append(btnOk).append(btnCancel);
+      btnOk.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt11').text(txtInput.val());
+        $('.txt11').show();
+      });
+      btnCancel.on('click',function(){
+        $('#btnOk,#btnCancel,#txtInput').remove();
+        $('.txt11').show();
+      });
+    });
 
   })
-
