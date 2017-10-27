@@ -20,22 +20,36 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body style="background-color:green;">
     <?php
-
     session_start();
-
-    //TODO: do not hardcode, get from database
     const login = 'admin';
-    const password = 'admin';
+    const password='password';
+	$link = mysqli_connect("localhost", "root", '',"contact");
+	if($link === false){  	die("ERROR: Could not connect. " . mysqli_connect_error());}
+	 $pword="password";
+	$options = [
+    		'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
+    		'cost' => 12
+			];
+	$hash = password_hash($pword, PASSWORD_DEFAULT, $options);
+		$sql = "UPDATE login_detail SET password='$hash' WHERE user_name='admin';";
+			if(mysqli_query($link, $sql)){}
+         else{echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);}
+		if (password_needs_rehash($hash, PASSWORD_DEFAULT, ['cost' => 12]))
+    {  $hash = password_hash($pword, PASSWORD_DEFAULT, ['cost' => 12]);
+			$sql = "UPDATE login_detail SET password='$hash' WHERE user_name='admin';";
+		if(mysqli_query($link, $sql)){}	 else{echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);}
+							}
 
-    if (isset($_POST['login']) && isset($_POST['password'])) //when form submitted
-    {
+	  if (isset($_POST['login']) && isset($_POST['password'])) //when form submitted
+    {if (password_verify($_POST['password'], $hash)) {
+      		echo 'Password is valid!';
       if ($_POST['login'] === login && $_POST['password'] === password)
       {
         $_SESSION['login'] = $_POST['login']; //write login to server storage
         header('Location: /doctor-final-master/php/index1.php'); //redirect to main
-      }
+      }}
       else
       {
         echo "<script>alert('Wrong login or password');</script>";
@@ -43,9 +57,14 @@
       }
     }
 
+	 else {
+    		}
+
+
+
     ?>
 
-    <form method="post" class="card" style="width: 55%; margin: 64px auto;">
+    <form method="post" enctype="multipart/form-data" class="card" style="width: 55%; margin: 64px auto;">
     <h1>Admin Login</h1>
       <div class="section group">
         <div class="col span_1_of_3"></div>
@@ -59,7 +78,7 @@
         <div class="col span_1_of_3"></div>
         <div class="col span_1_of_3">
           <label>Password</label>
-          <input name="password" required>
+          <input name="password" type="password" required>
         </div>
         <div class="col span_1_of_3"></div>
       </div>

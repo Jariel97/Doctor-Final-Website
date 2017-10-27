@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-
+    <title>Dashboard</title>
     <!-- Bootstrap -->
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -30,17 +29,10 @@
 
     if (session_id() == '' || !isset($_SESSION['login'])) { //if sid exists and login for sid exists
 
-    ?>
 
-    <a href="/doctor-final-master/php/login.php">Login</a>
-
-    <?php
-
-    } else {
-
-      echo "Hi, " . $_SESSION['login'];
-
-    ?>
+header( "Refresh:0; url=http://localhost:8080/doctor-final-master/", true, 303);
+?>
+    <?php } else {?>
     <nav>
                 <li class="logo" style="background-color:#ADD8E6;">Dr. Sudha's Homeopathy</li>
                 <a class="bars drop-target" onclick="showMenu();">
@@ -59,33 +51,34 @@
                     <li class="nav-link"><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
+            <video poster="../img/Clouds_Fly_By.jpg" playsinline autoplay muted loop>
+          <source src="../img/Clouds_Fly_By.webm" type="video/webm"/>
+          <source src="../img/Clouds_Fly_By.mp4" type="video/mp4"/>
+          <source src="../img/Clouds_Fly_By.ogg" type="video/ogg"/>
+      </video>
     <a href="/logout.php">Logout</a>
     <a href="/selectall.php">See the Online Consultation list</a>
     <a href="../faq.html">Edit FAQ page</a>
-
-
-    <?php
-
-    }
-
-    ?>
     <div class="section group" style="margin-top: 64px;">
         <div class="col span_3_of_3"><h1><center>Welcome to the dasboard</center></h1></div>
     </div>
-    <div class="section group">
+    <div class="section group ">
       <div class="col span_3_of_3">
-        <h2><center>Select a tast</center></h2>
+        <h2><center>Select a task</center></h2>
       </div>
 
     </div>
-    <div class="section group">
+    <div class="section group card" style="margin:auto;width:50%;">
       <div class="col span_3_of_3">
-        <ul>
+  <center>      <ul>
           <li class="nav-link"><a href="../faq.html">Edit FAQ page</a></li>
           <li class="nav-link"><a href="selectall.php">See the Online Consultation list</a></li>
-          <li class="nav-link"><a href="logout.php">Logout</a></li>
+          <li class="nav-link"><a href="logout.php">Logout</a></li></center>
         </ul>
       </div>
     </div>
   </body>
 </html>
+
+
+    <?php    }?>

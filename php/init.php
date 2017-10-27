@@ -24,7 +24,17 @@ if(mysqli_query($link, $sql1)){
     } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
+$sql1="CREATE TABLE `contact`.`login_detail` ( `user_id` INT NOT NULL AUTO_INCREMENT , `user_name` TEXT NOT NULL , `password` TEXT NOT NULL , PRIMARY KEY (`user_id`)) ENGINE = InnoDB;";
+if(mysqli_query($link, $sql1)){
+    } else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
 
+$sql1="INSERT INTO `login_detail` (`user_id`, `user_name`, `password`) VALUES ('1', 'admin', '$2y$12$T7Shg4XGWQQ..3cJEqeTn.5Y4nmLBDMbEJB5GAXJy8HkwtcGMI2Iu');";
+if(mysqli_query($link, $sql1)){
+    } else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
  
 // Close connection
 mysqli_close($link);
